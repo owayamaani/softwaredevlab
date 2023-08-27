@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">great</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <array name="courses">
+        <item>Computer Technology</item>
+        <item>Dental Surgery</item>
+        <item>Data Science</item>
+        <item>Civil Engineering</item>
+        <item>Social Engineering</item>
+    </array>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
