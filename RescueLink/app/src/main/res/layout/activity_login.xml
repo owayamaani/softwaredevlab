@@ -11,6 +11,7 @@
         android:id="@+id/logpass"
         android:layout_width="271dp"
         android:layout_height="56dp"
+        android:layout_marginBottom="72dp"
         android:background="@drawable/input_bg"
         android:drawableLeft="@drawable/ic_baseline_security_24"
         android:drawablePadding="10dp"
@@ -23,10 +24,9 @@
         android:paddingBottom="10dp"
         android:textColor="@color/white"
         android:textColorHint="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.507"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="356dp" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/mediView"
