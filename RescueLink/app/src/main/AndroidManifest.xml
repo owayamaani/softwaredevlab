@@ -13,6 +13,9 @@
         android:theme="@style/Theme.RescueLink"
         tools:targetApi="31">
         <activity
+            android:name=".BookAppointmentActivity"
+            android:exported="false" />
+        <activity
             android:name=".DocDetailsActivity"
             android:exported="false" />
         <activity

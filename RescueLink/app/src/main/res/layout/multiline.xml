@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/prussian_blue"
+    android:padding="8dp"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/line_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#ffff"
+        android:textSize="16sp"
+        android:text="Medicine 1"
+        android:textStyle="italic"/>
+
+    <TextView
+        android:id="@+id/line_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#ffff"
+        android:text="medicine 2"
+        android:textSize="16sp"
+        android:textStyle="italic"/>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        >
+        <TextView
+            android:id="@+id/line_3"
+            android:layout_width="0dp"
+            android:layout_weight="0.20"
+            android:layout_height="wrap_content"
+            android:textColor="#ffff"
+            android:textSize="16sp"
+            android:text="details"
+            android:textStyle="italic"/>
+
+        <TextView
+            android:id="@+id/line_3b"
+            android:layout_width="0dp"
+            android:layout_weight="0.50"
+            android:layout_height="wrap_content"
+            android:textColor="#ffff"
+            android:textSize="16sp"
+            android:text="details"
+            android:textStyle="italic"/>
+
+
+
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

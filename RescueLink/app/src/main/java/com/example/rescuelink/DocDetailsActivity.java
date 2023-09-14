@@ -5,7 +5,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
 
@@ -92,6 +94,30 @@ public class DocDetailsActivity extends AppCompatActivity {
         for (int i=0;i<doc_details.length;i++){
             item = new HashMap<String, String>();
             item.put("line1",doc_details[i][0]);
+            item.put("line2",doc_details[i][1]);
+            item.put("line3",doc_details[i][2]);
+            item.put("line4","Consultation fee:"+doc_details[i][2]+"Ksh");
+            list.add(item);
         }
+        sa = new SimpleAdapter(this,list,
+                R.layout.multiline,
+                new String[]{"line1","line2","line3","line4",},
+                new int []{R.id.line_1,R.id.line_2,R.id.line_3,R.id.line_3b});
+        ListView lst = findViewById(R.id.listViewD);
+        lst.setAdapter(sa);
+
+        lst.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Intent it = new Intent(DocDetailsActivity.this,BookAppointmentActivity.class);
+                it.putExtra("text1",title);
+                it.putExtra("text2",doc_details[i][0]);
+                it.putExtra("text3",doc_details[i][1]);
+                it.putExtra("text4",doc_details[i][2]);
+                it.putExtra("text5",doc_details[i][3]);
+                startActivity(it);
+            }
+        });
+
     }
 }
