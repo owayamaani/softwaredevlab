@@ -96,6 +96,8 @@ public class DocDetailsActivity extends AppCompatActivity {
             item.put("line1",doc_details[i][0]);
             item.put("line2",doc_details[i][1]);
             item.put("line3",doc_details[i][2]);
+            item.put("line4",doc_details[i][3]);
+            item.put("line5",doc_details[i][4]);
             item.put("line4","Consultation fee:"+doc_details[i][2]+"Ksh");
             list.add(item);
         }
