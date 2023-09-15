@@ -1,2 +1,2 @@
-# softwaredevlab
+# MediLink
 MediLink is an app designed to empower users with convenient and accessible healthcare solutions. Its goal is to streamline healthcare services by offering a one-stop platform for users to create accounts, log in, and access a wide range of essential healthcare services, including booking lab tests, scheduling doctor appointments, purchasing medications, and effortlessly managing orders and appointments. With MediLink, we aim to bring healthcare to your fingertips, making it easier for individuals to take control of their well-being.
