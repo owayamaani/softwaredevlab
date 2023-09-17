@@ -24,7 +24,7 @@ public class RegisterActivity extends AppCompatActivity {
         edEmail = findViewById(R.id.appAddress);
         edPassword  = findViewById(R.id.appContact);
         edConfirm = findViewById(R.id.appFees);
-        btn = findViewById(R.id.bookBtn) ;
+        btn = findViewById(R.id.regBtn) ;
         tv = findViewById(R.id.textViewExisting);
 
 

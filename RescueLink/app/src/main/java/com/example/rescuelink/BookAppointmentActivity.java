@@ -7,19 +7,22 @@ import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.TimePicker;
 
 import java.util.Calendar;
 
 public class BookAppointmentActivity extends AppCompatActivity {
     EditText et1,et2,et3,et4;
     TextView tv;
-    private DatePickerDialog datePickerDialog;
-    //private TimePickerDialog timePickerDialog;
+
     private TimePickerDialog timePickerDialog;
+    private DatePickerDialog datePickerDialog;
+    private Button dateButton, timeButton, btnBook, btnBack;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +34,10 @@ public class BookAppointmentActivity extends AppCompatActivity {
         et2 = findViewById(R.id.appAddress);
         et3 = findViewById(R.id.appContact);
         et4 = findViewById(R.id.appFees);
+        btnBack = findViewById((R.id.backBtn2));
+        btnBook = findViewById((R.id.regBtn));
+        dateButton = findViewById(R.id.dateButton);
+        timeButton = findViewById(R.id.timeButton);
 
         //ensure they are not editable
         et1.setKeyListener(null);
@@ -52,13 +59,37 @@ public class BookAppointmentActivity extends AppCompatActivity {
         et2.setText(address);
         et3.setText(contact);
         et4.setText("consultation Fees "+fees+ " Ksh");
+
+        //date picker
+        datePickerInit();
+        dateButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                datePickerDialog.show();
+
+            }
+        });
+
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(BookAppointmentActivity.this,FindDocActivity.class));
+            }
+        });
+
+        btnBook.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
     }
     private void datePickerInit() {
         DatePickerDialog.OnDateSetListener dateSetListener = new DatePickerDialog.OnDateSetListener() {
             @Override
             public void onDateSet(DatePicker datePicker, int i, int i1, int i2) {
                 i1 = i1 + 1;
-                //dateButton.setText(i2+"/"i1);
+                dateButton.setText(i2+"/"+i1+"/"+i);
             }
         };
         Calendar calendar = Calendar.getInstance();
@@ -71,7 +102,8 @@ public class BookAppointmentActivity extends AppCompatActivity {
         datePickerDialog.getDatePicker().setMinDate((calendar.getTimeInMillis()+86400000));
 
     }
-    private void timePickerInit() {
+    //correct later...cannot apply time picker well...
+    /*private void timePickerInit() {
 
     }
         TimePickerDialog.OnTimeSetListener timeSetListener = new TimePickerDialog.OnTimeSetListener() {
@@ -86,8 +118,7 @@ public class BookAppointmentActivity extends AppCompatActivity {
         int mins = calendar.get(Calendar.MINUTE);
 
         int style = AlertDialog.THEME_HOLO_DARK;
-        
-
-        //timePickerDialog = new DatePickerDialog(this,style,timeSetListener,hrs,mins,trues);
+        timePickerDialog = new timePickerDialog(this,style,timeSetListener,hrs,mins,true);
+        timePicker*/
 
 }

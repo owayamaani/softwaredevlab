@@ -54,6 +54,16 @@ public class FindDocActivity extends AppCompatActivity {
             }
         });
 
+        /*CardView entSpecialist= findViewById(R.id.entSpecialist);
+        entSpecialist.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent it = new Intent(FindDocActivity.this, DocDetailsActivity.class);
+                it.putExtra("title", "ENT Specialist");
+                startActivity(it);
+            }
+        });*/
+
 
     }
 }

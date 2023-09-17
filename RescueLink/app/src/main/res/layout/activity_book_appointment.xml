@@ -134,13 +134,13 @@
         android:paddingBottom="10dp"
         android:textColor="@color/white"
         android:textColorHint="@color/white"
-        app:layout_constraintBottom_toTopOf="@+id/bookBtn"
+        app:layout_constraintBottom_toTopOf="@+id/regBtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.487"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/bookBtn"
+        android:id="@+id/regBtn"
         android:layout_width="313dp"
         android:layout_height="53dp"
         android:layout_marginBottom="96dp"
@@ -172,7 +172,7 @@
         android:layout_marginTop="4dp"
         android:layout_marginBottom="38dp"
         android:text="8/08/2023"
-        app:layout_constraintBottom_toTopOf="@+id/bookBtn"
+        app:layout_constraintBottom_toTopOf="@+id/regBtn"
         app:layout_constraintEnd_toStartOf="@+id/timeButton"
         app:layout_constraintHorizontal_bias="0.296"
         app:layout_constraintStart_toStartOf="parent"
@@ -190,6 +190,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/appFees" />
 
+
+
     <Button
         android:id="@+id/timeButton"
         style="?spinnerStyle"
@@ -198,7 +200,7 @@
         android:layout_marginTop="4dp"
         android:layout_marginEnd="84dp"
         android:text="09:00"
-        app:layout_constraintBottom_toTopOf="@+id/bookBtn"
+        app:layout_constraintBottom_toTopOf="@+id/regBtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/timeTextView"
         app:layout_constraintVertical_bias="0.0" />

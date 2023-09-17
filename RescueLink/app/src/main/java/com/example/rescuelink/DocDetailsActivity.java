@@ -64,7 +64,7 @@ public class DocDetailsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_doc_details);
 
         tv = findViewById((R.id.mediView2));
-        btn = findViewById(R.id.backbtn);
+        btn = findViewById(R.id.LtBackBtn);
 
         Intent it = getIntent();
         String title = it.getStringExtra("title");
@@ -96,8 +96,6 @@ public class DocDetailsActivity extends AppCompatActivity {
             item.put("line1",doc_details[i][0]);
             item.put("line2",doc_details[i][1]);
             item.put("line3",doc_details[i][2]);
-            item.put("line4",doc_details[i][3]);
-            item.put("line5",doc_details[i][4]);
             item.put("line4","Consultation fee:"+doc_details[i][2]+"Ksh");
             list.add(item);
         }
@@ -105,7 +103,7 @@ public class DocDetailsActivity extends AppCompatActivity {
                 R.layout.multiline,
                 new String[]{"line1","line2","line3","line4",},
                 new int []{R.id.line_1,R.id.line_2,R.id.line_3,R.id.line_3b});
-        ListView lst = findViewById(R.id.listViewD);
+        ListView lst = findViewById(R.id.labListView);
         lst.setAdapter(sa);
 
         lst.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -117,6 +115,7 @@ public class DocDetailsActivity extends AppCompatActivity {
                 it.putExtra("text3",doc_details[i][1]);
                 it.putExtra("text4",doc_details[i][2]);
                 it.putExtra("text5",doc_details[i][3]);
+
                 startActivity(it);
             }
         });
